@@ -114,7 +114,6 @@ ul, ol {
     text-transform: uppercase;
 }
 
-
 section{
     display: block;
 }
@@ -128,7 +127,6 @@ section{
     font-size: 20px;
     margin-bottom: 65px;
 }
- 
 
 .now-in-trend{
     width: 100%;
@@ -157,52 +155,39 @@ section{
 }
 
 .trend-posts{
-    height: 320px;
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    flex: 0 1 25%;
-    padding: 0 20px 15px 20px;
-    min-height: 320px;
-}
-.trend-posts:nth-child(n+2){
-    background-position: center top;
-    background-size: cover;
-    width: 100%;
-    min-width: 1200px;
-    background-color: #000000;
-}
-.trend-posts::after {
-    content: '';
-    display: block;
-    opacity: 0.6;
-    background-color: black;
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;    
-}
-.imagine{
     display: flex;
     justify-content: center;
-    height: 310px;  
 }
-.trend-tags{
-    display: flex;
-    position: relative;
-    flex: 0 1 25%;
-    margin-right: 4px;
-    padding: 0 20px 15px 20px;
-    min-height: 320px;
-}
-.tags-title{
-    display: flex;
-    list-style-type: none;
+
+.trend-post {
+    display: block;
     flex-wrap: wrap;
-    margin: 0;
-    padding: 0; 
+    align-items: center;
 }
+
+.trend-post-image {
+    position: relative;
+}
+
+.trend-post-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);  
+    z-index: 1;
+}
+
+.trend-post:nth-child(n+2) {
+    padding-left: 5px;
+}
+
+.post-description {
+    border: 2px solid #b59f5b;
+}
+
 .tag-list{
     margin-right: 20px;
     font-weight: 700;
